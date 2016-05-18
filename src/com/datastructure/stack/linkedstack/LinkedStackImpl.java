@@ -16,7 +16,7 @@ public class LinkedStackImpl implements LinkedStack {
         newNode.data = item;
         newNode.link = top;
         top = newNode;
-        System.out.println("Inserted Item: " + item);
+        //System.out.println("Inserted Item: " + item);
     }
 
     public char pop() {
