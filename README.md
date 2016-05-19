@@ -33,6 +33,9 @@
 ### Deque (Double-ended Queue)
 큐의 양쪽 끝에서 삽입, 삭제가 모두 발생할 수 있는 큐로서 스택의 성질과 큐의 성질을 모두 가짐.
 
+-	`com.datastructure.queue.dequeue`
+
+
 | 		  |연산자|연산수행위치|
 |--------|--------|--------|
 | 삽입연산 | insert | front 또는 rear |
