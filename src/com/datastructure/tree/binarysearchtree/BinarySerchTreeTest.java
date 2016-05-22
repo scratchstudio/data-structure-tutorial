@@ -32,7 +32,7 @@ public class BinarySerchTreeTest {
     @Test
     public void binarySearchTreeTest() {
         System.out.print("Binary Serch Tree >> ");
-        bst.printBinarySerchTree();
+        bst.printBinarySerchTree(); //ABDEGHIJMNQ
 
         TreeNode p1 = bst.searchBinarySearchTree('A');
         assertThat(p1.data, is('A'));

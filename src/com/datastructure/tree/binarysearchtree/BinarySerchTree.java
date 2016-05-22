@@ -53,5 +53,4 @@ public class BinarySerchTree {
         inOrder(root);
         System.out.println();
     }
-
 }
