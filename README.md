@@ -62,3 +62,50 @@
 - [`com.datastructure.tree.heap`] (https://github.com/iamkyu/data-structure-tutorial/tree/master/src/com/datastructure/tree/heap) 순차 자료 구조를 통한 최대 힙 구현.
 
 ## Graph
+모든 연결 구조를 표현할 수 있는 자료구조. 연결할 객체를 나타내는 정점(Vertex)와 간선(Edge)의 집합으로 구성. `G=(V, E)`
+
+- [`com.datastructure.graph.AdjMatrix`] (https://github.com/iamkyu/data-structure-tutorial/tree/master/src/com/datastructure/graph) 순차자료구조방식을 이용한 그래프 구현(인접행렬 방법)
+- [`com.datastructure.graph.AdjList`] (https://github.com/iamkyu/data-structure-tutorial/tree/master/src/com/datastructure/graph) 연결자료구조방식을 이용한 그래프 구현(인접리스트 방법)
+
+<br>
+### 그래프의 종류
+
+#### *- 무방향 그래프 (Undirected Graph)*
+두 정점을 연결하는 간선에 방향이 없는 그래프. `(Vi, Vj)`와 `(Vj, Vi)` 는 같은 간선을 나타냄.
+
+#### *- 방향 그래프 (Directed Graph)*
+다이그래프(Digraph)라고도 하며, 간선에 방향이 있는 그래프. Vi -> Vj를 `<Vi, Vj>` 로 표현하고 화살표로 나타냄. Vi를 tail, Vj를 head라고 함. `<Vi, Vj>`와 `<Vj, Vi>`  는 서로 다른 간선.
+
+#### *- 완전 그래프 (Complete Graph)*
+한 정점에서 다른 모든 정점과 연결되어 최대 간선 수를 가진 그래프. 정점이 `n`개인 무방향 그래프의 최대 간선 수는 `n(n-1)/2`개 이며, 방향 그래프의 경우는 `n(n-1)`개.
+
+#### *- 부분 그래프 (Sub Graph)*
+원래 그래프에서 일부의 정점이나 간선을 제외하여 만든 그래프.
+
+#### *- 가중 그래프 (Weight Graph or Network)*
+정점을 연결하는 간선에 가중치를 할당한 그래프.
+
+<br>
+### 그래프 순회
+- [`com.datastructure.graph.search`] (https://github.com/iamkyu/data-structure-tutorial/tree/master/src/com/datastructure/graph/search)
+
+#### *- 깊이 우선 탐색 (Depth First Search)*
+시작 정점에서 한 방향으로 가장 먼 경로까지 깊이 탐색했다가 더 이상 갈 곳이 없으면 가장 마지막에 만난 갈림길로 되돌아와서 다른 방향의 간선으로 탐색을 계속함. 후입 선출 구조의 스택을 이용.
+> (1) 시작 정점 v 방문<br>
+> (2) 정점 v에 인접한 정점 중<br>
+> 
+> - a. 방문하지 않은 정점 w가 있으면 정점 v를 스택에 push하고 w를 방문.<br>
+> - b. 방문하지 않은 정점이 없으면 스택을 pop하여 가장 마지막 정점을 v로 설정.<br>
+>
+> (3) 스택이 공백이 될 때까지 (2)를 반복.
+
+#### *- 너비 우선 탐색 (Breath First Search)*
+시작 정점으로부터 인접한 정점들을 모두 차례로 방문 후, 방문했던 정점을 다시 시작점으로 하여 인접한 정점들을 차례로 방문. 선입선출의 구조의 큐를 이용.
+> (1) 시작 정점 v 방문<br>
+> (2) 정점 v에 인접한 정점 중<br>
+> 
+> - a. 방문하지 않은 정점이 있으면 차례로 방문하면서 큐에 enQueue.<br>
+> - b. 방문하지 않은 정점이 없으면 큐를 deQueue하여 구한 정점을 v로 설정하고 다시 (2)를 반복.<br>
+>
+> (3) 큐가 공백이 될 때까지 (2)를 반복.
+
