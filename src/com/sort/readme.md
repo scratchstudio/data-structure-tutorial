@@ -55,3 +55,6 @@
 - [`com.sort.merge`] (https://github.com/iamkyu/data-structure-tutorial/tree/master/src/com/sort/merge)
 
 여러 개의 정렬된 자료의 집합을 한 개의 정렬된 집합으로 만드는 방법. `n`개의 정렬된 자료의 집합을 결합하여 하나의 집합으로 만드는 병합 방법을 `n`-way 병합이라고 함.
+
+## 기수 정렬 (Radix Sort)
+분배 방식의 정렬 방법으로 정렬할 원소의 키 값에 해당하는 버킷(Bucket)에 원소를 분배하였다가 버킷의 순서대로 원소를 꺼내는 방법을 반복.
